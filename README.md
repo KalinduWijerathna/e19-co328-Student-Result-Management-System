@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Acadametrics v2.0!</h1>
 
 <p align="center">
-  <img src="images/academetrix-logo.jpeg" alt="Academetrix Logo" width="200">
+  <img src="images/logo-no-background.png" alt="Academetrix Logo" width="200">
 </p>
 
 <p align="center">A Student Result Management System for University: Web Application</p>
