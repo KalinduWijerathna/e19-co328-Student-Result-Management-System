@@ -29,7 +29,7 @@ public class UserService {
 //    @Autowired
 //    private DepartmentRepository departmentRepository;
 //    @Autowired
-//    //private SecurityConfig securityConfig;
+    //private SecurityConfig securityConfig;
 //
 //    public void saveUser(UserRegistrationDTO userRegistrationDTO) {
 //        // relations should be explicitly mapped or we get null values refer resource below
