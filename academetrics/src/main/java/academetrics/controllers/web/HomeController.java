@@ -1,8 +1,7 @@
-package academetrics.controller;
+package academetrics.controllers.web;
 
 import academetrics.dto.StudentCourseDTO;
 import academetrics.dto.StudentDTO;
-import academetrics.repository.StudentRepository;
 import academetrics.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
