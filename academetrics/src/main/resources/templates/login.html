@@ -35,12 +35,8 @@
     </style>
 </head>
 <body class="flex flex-col h-screen justify-between">
-<header class="m-4 flex items-center justify-between rounded-full bg-white p-4 shadow">
-    <div class="flex items-center">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/University_of_Peradeniya_crest.png" alt="University of Peradeniya" class="header-logo">
-        <h1 class="m-3 font-medium">University of Peradeniya</h1>
-    </div>
-    <img src="../images/logo.svg" alt="Academatrix" class="header-logo">
+<header >
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
 </header>
 
 <main class="flex mt-10 items-center justify-center">
@@ -64,7 +60,7 @@
                 <p class="text-sm text-slate-500">Forgot your password? <a href="#" class="text-blue-500">Click here</a></p>
             </div>
             <div id="error" class="error-message mb-4">Error: User does not exist</div>
-            <button type="submit" class="w-full rounded-lg bg-yellow-500 px-4 py-2 font-bold text-white shadow-lg hover:bg-yellow-600">Login</button>
+            <button type="submit" class="w-full rounded-lg bg-yellow-500 px-5 py-2 font-bold text-white shadow-lg hover:bg-yellow-600">Login</button>
         </form>
     </div>
 </main>
