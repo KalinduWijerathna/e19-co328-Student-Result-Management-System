@@ -9,7 +9,11 @@
 }
 
 .rest-h-screen{
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 130px);
+}
+
+.rest-h-screen-fix{
+    height: calc(100vh - 130px);
 }
 
 body {

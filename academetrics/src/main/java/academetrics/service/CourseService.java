@@ -68,6 +68,7 @@ public class CourseService {
         return getCourseByCode(courseDTO.getCode());
     }
 
+
     public CourseDTO updateCourse(String courseCode, CourseDTO updatedCourseDTO) {
         Course existingCourse = courseRepository.findByCode(courseCode);
         if (existingCourse != null) {
