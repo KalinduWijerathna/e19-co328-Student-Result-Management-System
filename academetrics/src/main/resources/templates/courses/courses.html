@@ -13,11 +13,10 @@
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 
     <!-- Add courses -->
-<main class="container mx-auto px-3">
+<main class="container flex mx-auto px-3">
     <div class="fixed bottom-5 right-5">
         <a th:href="@{/courses/new}" class="flex items-center justify-center bg-blue-500 text-white aspect-square size-10 rounded-full text-2xl font-bold hover:bg-blue-600"><i class="fa-solid fa-plus"></i></a>
     </div>
-
     <div th:replace="courses/course-list :: course-list">
         <!-- Course list will be loaded here initially -->
     </div>

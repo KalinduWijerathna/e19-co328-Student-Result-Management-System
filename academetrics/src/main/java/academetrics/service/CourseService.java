@@ -52,6 +52,11 @@ public class CourseService {
         return courseDTOList;
     }
 
+    public CourseDTO getCourseByCode(String code){
+        Course course = courseRepository.findByCode(code);
+        return courseEntityToDTO(course);
+    }
+
     public CourseDTO saveCourse(CourseDTO courseDTO) {
         Course course = new Course();
         course.setCode(courseDTO.getCode());
@@ -60,18 +65,9 @@ public class CourseService {
         // Set other properties manually if needed
         courseRepository.save(course);
 
-        return getCourse(courseDTO.getCode());
+        return getCourseByCode(courseDTO.getCode());
     }
 
-
-
-    public CourseDTO getCourse(String courseCode) {
-        Course course = new Course();
-        course = courseRepository.findByCode(courseCode);
-        return courseEntityToDTO(course);
-    }
-
-/*
     public CourseDTO updateCourse(String courseCode, CourseDTO updatedCourseDTO) {
         Course existingCourse = courseRepository.findByCode(courseCode);
         if (existingCourse != null) {
@@ -86,13 +82,5 @@ public class CourseService {
         }
         return updatedCourseDTO;
     }
-
- */
- /*
-    public void deleteCourse(String courseCode) {
-        courseRepository.deleteByCode(courseCode);
-    }
-*/
-
 }
 

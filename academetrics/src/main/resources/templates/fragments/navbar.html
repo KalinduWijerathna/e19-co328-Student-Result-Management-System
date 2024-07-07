@@ -5,12 +5,12 @@
             <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/University_of_Peradeniya_crest.png" alt="University of Peradeniya" class="header-logo">
             <h1 class="m-3 font-medium">University of Peradeniya</h1>
         </div>
-        <img th:unless="${isLoggedIn}" src="../images/logo.svg" alt="Academatrix" class="header-logo">
+        <img th:unless="${isLoggedIn}" src="/images/logo.svg" alt="Academatrix" class="header-logo">
 
 
 <!--    if use logged in-->
         <div th:if="${isLoggedIn}" class="flex items-center">
-            <img src="../images/logo.svg" alt="Academatrix" class="header-logo">
+            <img src="/images/logo.svg" alt="Academatrix" class="header-logo">
             <h1 class="font-medium">cadematrix</h1>
 
             <div class="ml-8">
