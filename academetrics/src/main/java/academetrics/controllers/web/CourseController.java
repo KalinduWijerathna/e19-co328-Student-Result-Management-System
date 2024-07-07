@@ -1,10 +1,12 @@
 package academetrics.controllers.web;
 
 import academetrics.dto.CourseDTO;
+import academetrics.entity.Course;
 import academetrics.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
@@ -52,20 +54,16 @@ public class CourseController {
         return "redirect:/courses/";
     }
 
-    /*
-    @PostMapping("/update/{id}")
-    public String updateCourse(@PathVariable Long id, @ModelAttribute CourseDTO courseDTO, RedirectAttributes redirectAttributes) {
-        courseService.updateCourse(id, courseDTO);
-        redirectAttributes.addFlashAttribute("message", "Course updated successfully");
+    @GetMapping("/update/{code}")
+    public String editCourse(@PathVariable String code, Model model){
+        CourseDTO courseDTO = courseService.getCourseByCode(code);
+        model.addAttribute("course",courseDTO);
+        return "courses/course-form";
+    }
+    
+    @PostMapping("/update/{code}")
+    public String updateCourse(CourseDTO courseDTO, @PathVariable String code) {
+        courseService.updateCourse(code, courseDTO);
         return "redirect:/courses/";
     }
-
-    @PostMapping("/delete/{id}")
-    public String deleteCourse(@PathVariable Long id, RedirectAttributes redirectAttributes) {
-        courseService.deleteCourse(id);
-        redirectAttributes.addFlashAttribute("message", "Course deleted successfully");
-        return "redirect:/courses/";
-    }
-
- */
 }
